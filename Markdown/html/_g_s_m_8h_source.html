@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>冰箱异常报警装置: Project/Hardware/SIM900A/Inc/GSM.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">冰箱异常报警装置
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ffd1f789ec7bd0a45fc6ad92579c5070.html">Project</a></li><li class="navelem"><a class="el" href="dir_35552542c6060b7d49a9969ecc5d3fd1.html">Hardware</a></li><li class="navelem"><a class="el" href="dir_2cacf70715656091c3f9e37161a7317a.html">SIM900A</a></li><li class="navelem"><a class="el" href="dir_80653937d1bb0750bbfefb2c9a6a5449.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GSM.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_g_s_m_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef __GSM_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define __GSM_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="main_8h.html">main.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_g_s_m_8h.html#a47ec961977ed1f6461b7d00f5268737c">GSM_Init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_g_s_m_8h.html#a3953abf9e81096b497db1b6b0b29b09b">GSM_DeleteSMS</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_g_s_m_8h.html#a1df8722779f59befe39bf0c806df1030">GSM_SendMessage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *msg);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_g_s_m_8h.html#afde6975f57572d66dc3dccb41699dd5b">GSM_SendMessageBegin</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_g_s_m_8h.html#abb5cbcdd96b0562b7d17dd79bc41d746">GSM_SendMessageEnd</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_g_s_m_8h.html#a4d3a823fbc5906205b63af7f064c65fc">GSM_Process</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_g_s_m_8h.html#a3d2a023f4dd735fec3b78bc628c76f25">GSM_SMS_Query</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __GSM_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_g_s_m_8h_html_a1df8722779f59befe39bf0c806df1030"><div class="ttname"><a href="_g_s_m_8h.html#a1df8722779f59befe39bf0c806df1030">GSM_SendMessage</a></div><div class="ttdeci">void GSM_SendMessage(const char *msg)</div><div class="ttdoc">发送短信</div><div class="ttdef"><b>Definition:</b> GSM.c:128</div></div>
+<div class="ttc" id="a_g_s_m_8h_html_a47ec961977ed1f6461b7d00f5268737c"><div class="ttname"><a href="_g_s_m_8h.html#a47ec961977ed1f6461b7d00f5268737c">GSM_Init</a></div><div class="ttdeci">void GSM_Init(void)</div><div class="ttdoc">GSM 模块初始化</div><div class="ttdef"><b>Definition:</b> GSM.c:103</div></div>
+<div class="ttc" id="a_g_s_m_8h_html_a3953abf9e81096b497db1b6b0b29b09b"><div class="ttname"><a href="_g_s_m_8h.html#a3953abf9e81096b497db1b6b0b29b09b">GSM_DeleteSMS</a></div><div class="ttdeci">void GSM_DeleteSMS(void)</div><div class="ttdoc">删除所有信息</div><div class="ttdef"><b>Definition:</b> GSM.c:116</div></div>
+<div class="ttc" id="a_g_s_m_8h_html_afde6975f57572d66dc3dccb41699dd5b"><div class="ttname"><a href="_g_s_m_8h.html#afde6975f57572d66dc3dccb41699dd5b">GSM_SendMessageBegin</a></div><div class="ttdeci">void GSM_SendMessageBegin(void)</div><div class="ttdoc">发送内容前所需准备</div><div class="ttdef"><b>Definition:</b> GSM.c:139</div></div>
+<div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">断电报警装置</div></div>
+<div class="ttc" id="a_g_s_m_8h_html_a3d2a023f4dd735fec3b78bc628c76f25"><div class="ttname"><a href="_g_s_m_8h.html#a3d2a023f4dd735fec3b78bc628c76f25">GSM_SMS_Query</a></div><div class="ttdeci">void GSM_SMS_Query(void)</div><div class="ttdoc">查询界面</div><div class="ttdef"><b>Definition:</b> GSM.c:218</div></div>
+<div class="ttc" id="a_g_s_m_8h_html_a4d3a823fbc5906205b63af7f064c65fc"><div class="ttname"><a href="_g_s_m_8h.html#a4d3a823fbc5906205b63af7f064c65fc">GSM_Process</a></div><div class="ttdeci">void GSM_Process(void)</div><div class="ttdoc">收短信进程</div><div class="ttdef"><b>Definition:</b> GSM.c:246</div></div>
+<div class="ttc" id="a_g_s_m_8h_html_abb5cbcdd96b0562b7d17dd79bc41d746"><div class="ttname"><a href="_g_s_m_8h.html#abb5cbcdd96b0562b7d17dd79bc41d746">GSM_SendMessageEnd</a></div><div class="ttdeci">void GSM_SendMessageEnd(void)</div><div class="ttdoc">发送</div><div class="ttdef"><b>Definition:</b> GSM.c:168</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

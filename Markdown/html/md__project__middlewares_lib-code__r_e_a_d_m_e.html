@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>冰箱异常报警装置: Lib-code</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">冰箱异常报警装置
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Lib-code </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>嵌入式-编码转换</p>
+<p><img src="Markdown/logo.png" alt="logo" class="inline"/></p>
+<p><img src="https://img.shields.io/github/license/ChenxuanZhao/lib-code" alt="license" class="inline"/> <img src="https://img.shields.io/github/issues/ChenxuanZhao/lib-code" alt="issues" class="inline"/> <img src="https://img.shields.io/github/forks/ChenxuanZhao/lib-code" alt="forks" class="inline"/> <img src="https://img.shields.io/github/stars/ChenxuanZhao/lib-code" alt="stars" class="inline"/> <img src="https://img.shields.io/github/repo-size/ChenxuanZhao/lib-code" alt="repo-size" class="inline"/> <img src="https://img.shields.io/github/downloads/ChenxuanZhao/lib-code/total" alt="downloads" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+目录</h1>
+<ul>
+<li><a href="#lib-code">Lib-code</a></li>
+<li><a href="#目录">目录</a></li>
+<li><a href="#快速入门">快速入门</a><ul>
+<li><a href="#下载">下载</a></li>
+<li><a href="#keil-设置">Keil 设置</a></li>
+</ul>
+</li>
+<li><a href="#参考资料">参考资料</a></li>
+<li><a href="#项目进展">项目进展</a></li>
+<li><a href="#维护者">维护者</a></li>
+<li><a href="#许可证">许可证</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+快速入门</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+下载</h2>
+<div class="fragment"><div class="line">git clone https://github.com/ChenxuanZhao/lib-code.git</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+目录说明</h2>
+<div class="fragment"><div class="line">├─Core       // 源码</div>
+<div class="line">│  ├─Inc     // 头文件</div>
+<div class="line">│  ├─Lib     // LIB 库</div>
+<div class="line">│  └─Src     // 源代码</div>
+<div class="line">├─Demo       // 例程</div>
+<div class="line">└─Lib-creat  // Lib 库创建</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Keil 工程设置</h2>
+<blockquote class="doxtable">
+<p>Encoding: Encode in UTF-8 without signature </p>
+</blockquote>
+<p><img src="Markdown/KeilSet.png" alt="KeilSet" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+&lt;a href="https://baike.baidu.com/item/Unicode"&gt;参考资料&lt;/a&gt;</h1>
+<h2><a class="anchor" id="autotoc_md7"></a>
+UTF-8</h2>
+<blockquote class="doxtable">
+<p>UTF-8以字节为单位对Unicode进行编码。从Unicode到UTF-8的编码方式如下 </p>
+</blockquote>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Unicode编码 (hex)  </th><th class="markdownTableHeadNone">UTF-8 字节流 (bin))   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">000000 - 00007F  </td><td class="markdownTableBodyNone">0xxxxxxx   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">000080 - 0007FF  </td><td class="markdownTableBodyNone">110xxxxx 10xxxxxx   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">000800 - 00FFFF  </td><td class="markdownTableBodyNone">1110xxxx 10xxxxxx 10xxxxxx   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">010000 - 10FFFF  </td><td class="markdownTableBodyNone">11110xxx 10xxxxxx 10xxxxxx 10xxxxxx   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md8"></a>
+项目进展</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+单字符</h2>
+<ul>
+<li>[x] UTF-8 -&gt; UCS2</li>
+<li>[x] UCS2 -&gt; UTF-8</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+字符串</h2>
+<ul>
+<li>[x] UTF-8 -&gt; UCS2 编码</li>
+<li>[x] UCS2 编码 -&gt; UTF-8</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md11"></a>
+维护者</h1>
+<p><a href="https://github.com/ChenxuanZhao">Chenxuan Zhao</a></p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+许可证</h1>
+<p>[Apache License](LICENSE) <br  />
+ Copyright (c) 2020 Kiyotaka </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

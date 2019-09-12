@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>冰箱异常报警装置: Project/Hardware/SIM900A/Src/GSM.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">冰箱异常报警装置
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ffd1f789ec7bd0a45fc6ad92579c5070.html">Project</a></li><li class="navelem"><a class="el" href="dir_35552542c6060b7d49a9969ecc5d3fd1.html">Hardware</a></li><li class="navelem"><a class="el" href="dir_2cacf70715656091c3f9e37161a7317a.html">SIM900A</a></li><li class="navelem"><a class="el" href="dir_6fe16a928d72be439c908b54eb866b5a.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">GSM.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>GSM模块驱动程序  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_g_s_m_8h_source.html">GSM.h</a>&quot;</code><br />
+<code>#include &lt;intrins.h&gt;</code><br />
+<code>#include &lt;rtx51tny.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_d_h_t22_8h_source.html">DHT22.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lib__code_8h_source.html">lib_code.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="usart_8h_source.html">usart.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ab56f9f937902b77e7d2b1e52e004ce84"><td class="memItemLeft" align="right" valign="top"><a id="ab56f9f937902b77e7d2b1e52e004ce84"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RETRY</b>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:ab56f9f937902b77e7d2b1e52e004ce84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a43a6dea915cbe275bcc5a32622e003"><td class="memItemLeft" align="right" valign="top"><a id="a1a43a6dea915cbe275bcc5a32622e003"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CTRL_Z</b>&#160;&#160;&#160;0x1A</td></tr>
+<tr class="separator:a1a43a6dea915cbe275bcc5a32622e003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200d9515a6ace6fe114bca5b0151e424"><td class="memItemLeft" align="right" valign="top"><a id="a200d9515a6ace6fe114bca5b0151e424"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ARR_SIZE</b>(x)&#160;&#160;&#160;(sizeof(x) / (sizeof(x[0])))</td></tr>
+<tr class="separator:a200d9515a6ace6fe114bca5b0151e424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a47ec961977ed1f6461b7d00f5268737c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#a47ec961977ed1f6461b7d00f5268737c">GSM_Init</a> (void)</td></tr>
+<tr class="memdesc:a47ec961977ed1f6461b7d00f5268737c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GSM 模块初始化  <a href="_g_s_m_8c.html#a47ec961977ed1f6461b7d00f5268737c">更多...</a><br /></td></tr>
+<tr class="separator:a47ec961977ed1f6461b7d00f5268737c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3953abf9e81096b497db1b6b0b29b09b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#a3953abf9e81096b497db1b6b0b29b09b">GSM_DeleteSMS</a> (void)</td></tr>
+<tr class="memdesc:a3953abf9e81096b497db1b6b0b29b09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除所有信息  <a href="_g_s_m_8c.html#a3953abf9e81096b497db1b6b0b29b09b">更多...</a><br /></td></tr>
+<tr class="separator:a3953abf9e81096b497db1b6b0b29b09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df8722779f59befe39bf0c806df1030"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#a1df8722779f59befe39bf0c806df1030">GSM_SendMessage</a> (const char *msg)</td></tr>
+<tr class="memdesc:a1df8722779f59befe39bf0c806df1030"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送短信  <a href="_g_s_m_8c.html#a1df8722779f59befe39bf0c806df1030">更多...</a><br /></td></tr>
+<tr class="separator:a1df8722779f59befe39bf0c806df1030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde6975f57572d66dc3dccb41699dd5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#afde6975f57572d66dc3dccb41699dd5b">GSM_SendMessageBegin</a> (void)</td></tr>
+<tr class="memdesc:afde6975f57572d66dc3dccb41699dd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送内容前所需准备  <a href="_g_s_m_8c.html#afde6975f57572d66dc3dccb41699dd5b">更多...</a><br /></td></tr>
+<tr class="separator:afde6975f57572d66dc3dccb41699dd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda9b6fe38446786bbc4f696cfa19c9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#aeda9b6fe38446786bbc4f696cfa19c9f">GSM_SendMessageNewLine</a> (const char *msg)</td></tr>
+<tr class="memdesc:aeda9b6fe38446786bbc4f696cfa19c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送内容设置  <a href="_g_s_m_8c.html#aeda9b6fe38446786bbc4f696cfa19c9f">更多...</a><br /></td></tr>
+<tr class="separator:aeda9b6fe38446786bbc4f696cfa19c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5cbcdd96b0562b7d17dd79bc41d746"><td class="memItemLeft" align="right" valign="top"><a id="abb5cbcdd96b0562b7d17dd79bc41d746"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#abb5cbcdd96b0562b7d17dd79bc41d746">GSM_SendMessageEnd</a> (void)</td></tr>
+<tr class="memdesc:abb5cbcdd96b0562b7d17dd79bc41d746"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送 <br /></td></tr>
+<tr class="separator:abb5cbcdd96b0562b7d17dd79bc41d746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de81f15330dcbaaa5a73692bb2a730c"><td class="memItemLeft" align="right" valign="top"><a id="a0de81f15330dcbaaa5a73692bb2a730c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#a0de81f15330dcbaaa5a73692bb2a730c">isMobileNumber</a> (const char *str)</td></tr>
+<tr class="memdesc:a0de81f15330dcbaaa5a73692bb2a730c"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测手机号是否合法 <br /></td></tr>
+<tr class="separator:a0de81f15330dcbaaa5a73692bb2a730c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d294cff523362b63a168aa0f8c6625"><td class="memItemLeft" align="right" valign="top"><a id="a98d294cff523362b63a168aa0f8c6625"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#a98d294cff523362b63a168aa0f8c6625">GSM_ModifyMobileNum</a> (const char *str)</td></tr>
+<tr class="memdesc:a98d294cff523362b63a168aa0f8c6625"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改手机号 <br /></td></tr>
+<tr class="separator:a98d294cff523362b63a168aa0f8c6625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2a023f4dd735fec3b78bc628c76f25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#a3d2a023f4dd735fec3b78bc628c76f25">GSM_SMS_Query</a> (void)</td></tr>
+<tr class="memdesc:a3d2a023f4dd735fec3b78bc628c76f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询界面  <a href="_g_s_m_8c.html#a3d2a023f4dd735fec3b78bc628c76f25">更多...</a><br /></td></tr>
+<tr class="separator:a3d2a023f4dd735fec3b78bc628c76f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3a823fbc5906205b63af7f064c65fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_s_m_8c.html#a4d3a823fbc5906205b63af7f064c65fc">GSM_Process</a> (void)</td></tr>
+<tr class="memdesc:a4d3a823fbc5906205b63af7f064c65fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">收短信进程  <a href="_g_s_m_8c.html#a4d3a823fbc5906205b63af7f064c65fc">更多...</a><br /></td></tr>
+<tr class="separator:a4d3a823fbc5906205b63af7f064c65fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>GSM模块驱动程序 </p>
+<dl class="section author"><dt>作者</dt><dd>赵晨瑄 (<a href="#" onclick="location.href='mai'+'lto:'+'che'+'nx'+'uan'+'.z'+'hao'+'@i'+'clo'+'ud'+'.co'+'m'; return false;">chenx<span style="display: none;">.nosp@m.</span>uan.<span style="display: none;">.nosp@m.</span>zhao@<span style="display: none;">.nosp@m.</span>iclo<span style="display: none;">.nosp@m.</span>ud.co<span style="display: none;">.nosp@m.</span>m</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2020-05-13</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2020 </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a3953abf9e81096b497db1b6b0b29b09b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3953abf9e81096b497db1b6b0b29b09b">&#9670;&nbsp;</a></span>GSM_DeleteSMS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GSM_DeleteSMS </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除所有信息 </p>
+<dl class="section return"><dt>返回</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="a47ec961977ed1f6461b7d00f5268737c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ec961977ed1f6461b7d00f5268737c">&#9670;&nbsp;</a></span>GSM_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GSM_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GSM 模块初始化 </p>
+<dl class="section return"><dt>返回</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="a4d3a823fbc5906205b63af7f064c65fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3a823fbc5906205b63af7f064c65fc">&#9670;&nbsp;</a></span>GSM_Process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GSM_Process </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>收短信进程 </p>
+<dl class="section return"><dt>返回</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="a1df8722779f59befe39bf0c806df1030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df8722779f59befe39bf0c806df1030">&#9670;&nbsp;</a></span>GSM_SendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GSM_SendMessage </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送短信 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>发送内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afde6975f57572d66dc3dccb41699dd5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde6975f57572d66dc3dccb41699dd5b">&#9670;&nbsp;</a></span>GSM_SendMessageBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GSM_SendMessageBegin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送内容前所需准备 </p>
+<dl class="section return"><dt>返回</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="aeda9b6fe38446786bbc4f696cfa19c9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda9b6fe38446786bbc4f696cfa19c9f">&#9670;&nbsp;</a></span>GSM_SendMessageNewLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GSM_SendMessageNewLine </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送内容设置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>短信内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d2a023f4dd735fec3b78bc628c76f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2a023f4dd735fec3b78bc628c76f25">&#9670;&nbsp;</a></span>GSM_SMS_Query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GSM_SMS_Query </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询界面 </p>
+<dl class="section return"><dt>返回</dt><dd>None </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

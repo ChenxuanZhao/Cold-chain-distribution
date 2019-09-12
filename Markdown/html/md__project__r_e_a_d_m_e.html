@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>冰箱异常报警装置: 冰箱异常报警装置</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">冰箱异常报警装置
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">冰箱异常报警装置 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md14"></a>
+目录</h1>
+<ul>
+<li><a href="#冰箱异常报警装置">冰箱异常报警装置</a></li>
+<li><a href="#目录">目录</a></li>
+<li><a href="#快速入门">快速入门</a><ul>
+<li><a href="#目录说明">目录说明</a></li>
+<li><a href="#Keil-开发环境">Keil 开发环境</a></li>
+<li><a href="#Keil-设置">Keil 设置</a></li>
+<li><a href="#添加中间件">添加中间件</a></li>
+</ul>
+</li>
+<li><a href="#功能介绍">功能介绍</a><ul>
+<li><a href="#常规报警">常规报警</a></li>
+<li><a href="#查询">查询</a></li>
+<li><a href="#阈值设置">阈值设置</a></li>
+<li><a href="#更换手机号">更换手机号</a></li>
+<li><a href="#开关短信报警">开关短信报警</a></li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md15"></a>
+快速入门</h1>
+<h2><a class="anchor" id="autotoc_md16"></a>
+目录说明</h2>
+<div class="fragment"><div class="line">$ tree</div>
+<div class="line">.</div>
+<div class="line">├── clean.bat  // 清理临时文件</div>
+<div class="line">├── Core       // 源码</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── Inc</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── main.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── STC15F2K60S2.H</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── stdbool.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── stdint.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── usart.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; └── Src</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── main.c</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     └── usart.c</div>
+<div class="line">├── Hardware   // 硬件驱动程序</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── DHT22  // DHT22 驱动程序</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── doc</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── DHT22数字温湿度传感器AM2302温湿度.pdf</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── Inc</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── DHT22.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── Src</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp;     └── DHT22.c</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; └── SIM900A  // GSM 驱动程序</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── doc</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── 1. AT指令集</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── 2. 彩信资料</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── 3. 程序</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── 4. 调试工具</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── 5. 常见功能，常用资料汇总</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── 6. 调试教程 必看资料</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; └── 7. 原理图</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── Inc</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; └── GSM.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     └── Src</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;         └── GSM.c</div>
+<div class="line">├── Markdown</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── html</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── KeilSet1.png</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; └── KeilSet2.png</div>
+<div class="line">├── MDK-ARM     // Keil 工程文件</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── Conf_tny.A51</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── Listings</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── Project.m51</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── Objects</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── Project</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── Project.hex</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── Project.uvgui.Chenxuan</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── Project.uvopt</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; ├── Project.uvproj</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; └── STARTUP.A51</div>
+<div class="line">├── Middlewares  // 中间件</div>
+<div class="line">│&amp;nbsp;&amp;nbsp; └── lib-code</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── Core</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── Inc</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; ├── lib_code.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── stdint.h</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── Lib</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; │&amp;nbsp;&amp;nbsp; └── lib-code.LIB</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; └── Src</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp;     └── lib_code.c</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── Demo</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── Demo.uvproj</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── main.c</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; └── STARTUP.A51</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── Lib-creat</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; └── lib-code.uvproj</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── LICENSE</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     ├── Markdown</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; ├── KeilSet.png</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     │&amp;nbsp;&amp;nbsp; └── logo.png</div>
+<div class="line">│&amp;nbsp;&amp;nbsp;     └── README.md</div>
+<div class="line">└── README.md</div>
+<div class="line"> </div>
+<div class="line">40 directories, 98 files</div>
+</div><!-- fragment --><p><a href="Markdown/html/files.html">更多</a></p>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Keil 开发环境</h2>
+<div class="fragment"><div class="line">IDE-Version:</div>
+<div class="line">μVision V5.29.0.0</div>
+<div class="line">Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.</div>
+<div class="line"> </div>
+<div class="line">License Information:</div>
+<div class="line">Chenxuan Zhao</div>
+<div class="line">None</div>
+<div class="line">LIC=AT28G-VVKD0-JUU4W-QNTBR-XIRFF-7J5I3</div>
+<div class="line"> </div>
+<div class="line">Tool Version Numbers:</div>
+<div class="line">Toolchain:         PK51 Prof. Developers Kit  Version: 9.60.0.0</div>
+<div class="line">Toolchain Path:    D:\Program Files\Arm\Keil_v5\C51\BIN</div>
+<div class="line">C Compiler:        C51.exe              V9.60.0.0</div>
+<div class="line">Assembler:         A51.exe              V8.2.7.0</div>
+<div class="line">Linker/Locator:    BL51.exe             V6.22.2.0</div>
+<div class="line">Librarian:         LIB51.exe            V4.30.1.0</div>
+<div class="line">Hex Converter:     OH51.exe             V2.7.0.0</div>
+<div class="line">CPU DLL:           S8051.DLL            V3.122.0.0</div>
+<div class="line">Dialog DLL:        TP51.DLL             V2.60.0.0</div>
+<div class="line">Target DLL:        STCMON51.DLL         V1, 0, 10, 0</div>
+<div class="line">Dialog DLL:        TP51.DLL             V2.60.0.0</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
+Keil 工程设置</h2>
+<blockquote class="doxtable">
+<p>Encoding: Encode in UTF-8 without signature </p>
+</blockquote>
+<p><img src="Markdown/KeilSet1.png" alt="KeilSet1" class="inline"/></p>
+<blockquote class="doxtable">
+<p>Add License: ARTX51 Real-Time OS </p>
+</blockquote>
+<p><img src="Markdown/KeilSet2.png" alt="KeilSet2" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+添加中间件</h2>
+<h3><a class="anchor" id="autotoc_md20"></a>
+lib-code</h3>
+<p>用于 GSM 模块收发中文短信时编码和解码。 <a href="Middlewares/lib-code/README.html">更多</a></p>
+<h1><a class="anchor" id="autotoc_md21"></a>
+功能介绍</h1>
+<h2><a class="anchor" id="autotoc_md22"></a>
+常规报警</h2>
+<p>温度超过阈值</p>
+<div class="fragment"><div class="line">警报: 温度过高!</div>
+</div><!-- fragment --><p>冰箱供电异常</p>
+<div class="fragment"><div class="line">警报: 供电异常!</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
+查询</h2>
+<p>手机发送: <code>查询</code> 模块返回:</p>
+<div class="fragment"><div class="line">传感器:</div>
+<div class="line">状态: 连接正常</div>
+<div class="line">温度: 25.2℃</div>
+<div class="line">湿度: 65.8%RH</div>
+<div class="line"> </div>
+<div class="line">电源:</div>
+<div class="line">状态: 供电正常</div>
+<div class="line"> </div>
+<div class="line">设置:</div>
+<div class="line">阈值:   30℃</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
+阈值设置</h2>
+<p>手机发送: <code>阈值设置：12</code> 模块返回:</p>
+<p>成功:</p>
+<div class="fragment"><div class="line">提示: 阈值设置成功!</div>
+</div><!-- fragment --><p>失败:</p>
+<div class="fragment"><div class="line">提示: 阈值设置失败，请检查输入温度阈值是否正确!</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
+更换手机号</h2>
+<p>手机发送: <code>换号：13771731568</code> 模块返回:</p>
+<p>成功:</p>
+<div class="fragment"><div class="line">提示: 换号成功!</div>
+</div><!-- fragment --><p>失败:</p>
+<div class="fragment"><div class="line">提示: 换号失败，请检查输入手机号是否正确!</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
+开关短信报警</h2>
+<p>关闭:</p>
+<p>手机发送: <code>关闭短信报警</code> 模块返回:</p>
+<div class="fragment"><div class="line">提示: 短信报警已关闭!</div>
+</div><!-- fragment --><p>开启:</p>
+<p>手机发送: <code>开启短信报警</code> 模块返回:</p>
+<div class="fragment"><div class="line">提示: 短信报警已开启!</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

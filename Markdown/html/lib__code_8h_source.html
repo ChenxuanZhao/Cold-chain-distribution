@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>冰箱异常报警装置: Project/Middlewares/lib-code/Core/Inc/lib_code.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">冰箱异常报警装置
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ffd1f789ec7bd0a45fc6ad92579c5070.html">Project</a></li><li class="navelem"><a class="el" href="dir_b6a416abbac1bdc227a58b5f0a97c16c.html">Middlewares</a></li><li class="navelem"><a class="el" href="dir_bea01a7c84f491d72bad2bc7adfce61f.html">lib-code</a></li><li class="navelem"><a class="el" href="dir_70827a75d0da9e71f5812d4c08b9de0d.html">Core</a></li><li class="navelem"><a class="el" href="dir_eb8777f32bb69e51347e5377c8f0ab4c.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lib_code.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib__code_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef __LIB_CODE_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define __LIB_CODE_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;uint8_t <a class="code" href="lib__code_8h.html#abec5181a7453f1e098a80a0f15c5ae18">TSC_GetUtf8Char</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *, uint32_t *);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;uint16_t <a class="code" href="lib__code_8h.html#abd7bdaf5580ec36a820af887e3fa9e35">TSC_Utf8ToUcs2</a>(uint32_t);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;uint32_t <a class="code" href="lib__code_8h.html#af6e9a167ff803d9df964801ed304190d">TSC_Ucs2ToUtf8</a>(uint16_t);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib__code_8h.html#a2a210c2a0f1a711130c05a860d07392f">TSC_Utf8ToUcs2String</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keywordtype">char</span> *, int16_t);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib__code_8h.html#a154a9cc339486f58f1f9a0f5511112ad">TSC_Ucs2ToUtf8String</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keywordtype">char</span> *, int16_t);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __LIB_CODE_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alib__code_8h_html_abd7bdaf5580ec36a820af887e3fa9e35"><div class="ttname"><a href="lib__code_8h.html#abd7bdaf5580ec36a820af887e3fa9e35">TSC_Utf8ToUcs2</a></div><div class="ttdeci">uint16_t TSC_Utf8ToUcs2(uint32_t)</div><div class="ttdoc">utf8 编码 转成 ucs2 编码</div><div class="ttdef"><b>Definition:</b> lib_code.c:56</div></div>
+<div class="ttc" id="alib__code_8h_html_abec5181a7453f1e098a80a0f15c5ae18"><div class="ttname"><a href="lib__code_8h.html#abec5181a7453f1e098a80a0f15c5ae18">TSC_GetUtf8Char</a></div><div class="ttdeci">uint8_t TSC_GetUtf8Char(const char *, uint32_t *)</div><div class="ttdoc">utf8 编码</div><div class="ttdef"><b>Definition:</b> lib_code.c:33</div></div>
+<div class="ttc" id="alib__code_8h_html_af6e9a167ff803d9df964801ed304190d"><div class="ttname"><a href="lib__code_8h.html#af6e9a167ff803d9df964801ed304190d">TSC_Ucs2ToUtf8</a></div><div class="ttdeci">uint32_t TSC_Ucs2ToUtf8(uint16_t)</div><div class="ttdoc">ucs2 编码 转成 utf8 编码</div><div class="ttdef"><b>Definition:</b> lib_code.c:84</div></div>
+<div class="ttc" id="alib__code_8h_html_a2a210c2a0f1a711130c05a860d07392f"><div class="ttname"><a href="lib__code_8h.html#a2a210c2a0f1a711130c05a860d07392f">TSC_Utf8ToUcs2String</a></div><div class="ttdeci">void TSC_Utf8ToUcs2String(const char *, char *, int16_t)</div><div class="ttdoc">utf8 字符串 转成 ucs2 编码字符串</div><div class="ttdef"><b>Definition:</b> lib_code.c:115</div></div>
+<div class="ttc" id="alib__code_8h_html_a154a9cc339486f58f1f9a0f5511112ad"><div class="ttname"><a href="lib__code_8h.html#a154a9cc339486f58f1f9a0f5511112ad">TSC_Ucs2ToUtf8String</a></div><div class="ttdeci">void TSC_Ucs2ToUtf8String(const char *, char *, int16_t)</div><div class="ttdoc">ucs2 编码字符串 转成 utf8 字符串</div><div class="ttdef"><b>Definition:</b> lib_code.c:144</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>
